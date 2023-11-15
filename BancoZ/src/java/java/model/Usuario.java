@@ -8,13 +8,14 @@ package java;
  *
  * @author danie
  */
-public class Usuario {
+public abstract class Usuario {
     private int id;
-    private String tipo;
+    private Tipo tipo;
     private String nome;
     private String senha;
+    
 
-    public int getId() {
+     public int getId() {
         return id;
     }
 
@@ -23,7 +24,7 @@ public class Usuario {
     }
     
     public String getTipo() {
-        return tipo;
+        return tipo.getTipo();
     }
 
     public String getNome() {
@@ -35,7 +36,8 @@ public class Usuario {
     }
 
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+       this.tipo = new Tipo(tipo);
+        
     }
 
     public void setNome(String nome) {
@@ -46,5 +48,8 @@ public class Usuario {
         this.senha = senha;
     }
 
-    
+  
+
+ 
+
 }
